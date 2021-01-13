@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: iRest
+  name: iRest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iRest
+  template:
+    metadata:
+      labels:
+        app: iRest
+    spec:
+      containers:
+        - image: quay.io/openshift-pipeline/iRest:latest
+          imagePullPolicy: Always
+          name: iRest
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 9090
+              protocol: TCP
