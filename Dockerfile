@@ -1,4 +1,4 @@
-FROM maven:3.6.3-ibmjava-8-alpine as builder
+FROM maven:3.6.3-ibmjava-8 as builder
 WORKDIR /build/
 # copy these two for now, may need to copy all
 #COPY . /build/
