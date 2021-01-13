@@ -11,4 +11,4 @@ RUN mvn package
 # build iRest app image
 FROM websphere-liberty:20.0.0.12-full-java8-ibmjava
 COPY --chown=1001:0 --from=builder  /build/target/iRest.war /config/dropins/
-RUN configure.
+RUN configure.sh
