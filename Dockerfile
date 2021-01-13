@@ -12,4 +12,4 @@ RUN mvn package
 #FROM websphere-liberty:20.0.0.12-full-java8-ibmjava
 FROM ppc64le/websphere-liberty:20.0.0.12-full-java8-ibmjava
 COPY --chown=1001:0 --from=builder  /build/target/iRest.war /config/dropins/
-RUN configure.sh
+#RUN configure.sh
